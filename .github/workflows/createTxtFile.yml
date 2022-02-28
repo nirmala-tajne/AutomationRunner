@@ -9,7 +9,7 @@ on:
     branches: [ main ]
   pull_request:
     branches: [ main ]
-  paths:
+  package:
     - 'scenarios/**'
 
   # Allows you to run this workflow manually from the Actions tab
