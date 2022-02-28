@@ -29,8 +29,10 @@ jobs:
       - name: Run a one-line script
         run: node \test-print-hello.js
 
-      # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
-        run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
+      # commit changes
+      - uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: "[Bot] Update all the things!"
+          commit_user_name: Nirmala Tajne
+          commit_user_email: test@example.com
+          commit_author: Nirmala Tajne <test@example.com>
