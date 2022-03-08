@@ -1,4 +1,5 @@
 let fs = require('fs')
+const writeJsonFile = require('write-json-file');
 const path = require('path')
 console.log("Hello I am from test-print-hello")
 console.log('Post commit');
