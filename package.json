@@ -5,7 +5,7 @@
   "main": "test-print-hello.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "built": ".\test-print-hello.js"
+    "build": "ncc build ./test-print-hello.js -o dist"
   },
   "repository": {
     "type": "git",
@@ -16,5 +16,10 @@
   "bugs": {
     "url": "https://github.com/nirmala-tajne/AutomationRunner/issues"
   },
-  "homepage": "https://github.com/nirmala-tajne/AutomationRunner#readme"
+  "homepage": "https://github.com/nirmala-tajne/AutomationRunner#readme",
+  "dependencies": {
+    "@actions/core": "^1.6.0",
+    "@actions/github": "^5.0.0",
+    "@vercel/ncc": "^0.33.3"
+  }
 }

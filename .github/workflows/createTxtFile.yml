@@ -28,7 +28,7 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
-        run: node \test-print-hello.js
+        run: node .\dist\index.js
 
       # commit changes
       - uses: stefanzweifel/git-auto-commit-action@v4
