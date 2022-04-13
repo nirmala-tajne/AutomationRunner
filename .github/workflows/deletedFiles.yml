@@ -19,7 +19,7 @@ jobs:
 
       - name: Get deleted files
         id: deleted_files
-        uses: tj-actions/deleted_files@v18.7
+        uses: tj-actions/deleted-files@v18.7
 
       - name: List all deleted files
         run: |
