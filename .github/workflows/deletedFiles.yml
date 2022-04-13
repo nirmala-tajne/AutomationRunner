@@ -19,10 +19,10 @@ jobs:
 
       - name: Get deleted files
         id: deleted_files
-        uses: tj-actions/changed-files@v18.7
+        uses: tj-actions/deleted_files@v18.7
 
-      - name: List all changed files
+      - name: List all deleted files
         run: |
-          for file in ${{ steps.changed-files.outputs.all_changed_files }}; do
-            echo "$file was deleted"
+          for file in ${{ steps.deleted_files.outputs.all_changed_files }}; do
+            echo "**************  $file was deleted ************************"
           done
