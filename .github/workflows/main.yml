@@ -32,8 +32,7 @@ jobs:
         uses: tj-actions/changed-files@v18.7
 
       - name: List all deleted files
-        if: "steps.changed-files.outputs.deleted_files != null"
         run: |
-          for file in ${{ steps.outputs.deleted_files}}; do
+          for file in ${{ steps.changed-files.outputs.deleted_files}}; do
             echo "**************  $file was deleted ************************"
           done
