@@ -24,6 +24,18 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0  # OR "2" -> To retrieve the preceding commit.
+
+      - name: Get deleted files
+        id: deleted_files
+        uses: tj-actions/changed-files@v18.7
+
+      - name: List all deleted files
+        run: |
+          for file in ${{ steps.deleted_files.outputs.all_changed_files }}; do
+            echo "**************  $file was deleted ************************"
+          done
 
       - name: Run step if any of the listed files above change
         if: steps.changed-files-specific.outputs.any_changed == 'true'
