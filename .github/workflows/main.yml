@@ -32,9 +32,9 @@ jobs:
         uses: tj-actions/changed-files@v18.7
 
       - name: List all deleted files
-        if: steps.deleted_files.outputs == 0 
+        if: steps.outputs["Deleted files"] != 0 
         run: |
-          for file in ${{ steps.deleted_files.outputs }}; do
+          for file in ${{ steps.outputs["Deleted files"] }}; do
             echo "**************  $file was deleted ************************"
           done
 
