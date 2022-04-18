@@ -1,0 +1,40 @@
+node ./node_modules/protractor/bin/protractor .\config\config-chrome-serial-excution.js  
+
+
+Loal
+
+14.52 - 14.56
+
+
+15:00 - 15:05 
+
+
+Local 
+15:35
+
+Run spec
+
+Noted - 
+Spec execution
+
+4 spec for parallel and sequence 
+run time / job time - Done
+
+number of instance = number of sepc
+reading time for instance 
+
+Same specs from same location are not getting trigger
+
+try with short simple differentspecs
+
+Time stamp recording to confirm that they execute in parallel
+
+Multiple test case ID for resource usage
+
+
+Automation App Build Issue not Resolved
+
+*Max Instance m/c supports
+Can be slower
+
+document
