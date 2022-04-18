@@ -33,8 +33,8 @@ jobs:
         with:
           separator: ","
         
-      - name: List all added files
+      - name: List all deleted files
         run: |
-          for file in ${{ steps.changed-files.outputs.added_files }}; do
-            echo "$file was added"
+          for file in ${{ steps.changed-files.outputs.deleted_files }}; do
+            echo "$file was deleted"
           done
