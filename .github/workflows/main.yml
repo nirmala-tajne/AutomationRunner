@@ -33,6 +33,6 @@ jobs:
 
       - name: List all deleted files
         run: |
-          for file in ${{ steps.deleted_files}}; do
+          for file in ${{ steps.changed-files.deleted_files}}; do
             echo "**************  $file was deleted ************************"
           done
